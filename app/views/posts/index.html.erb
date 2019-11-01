@@ -1,0 +1,13 @@
+<h1>Listing posts</h1>
+ 
+
+
+  <% for post in @posts %>
+    <h1><%= post.title %></h1>
+    <p><%= post.text %></p>
+    <%= link_to 'Show', post_path(post) %>
+  <% end %>
+ 
+  
+<p>escribe un nuevo post</p>
+<%= link_to 'nuevo post', new_post_path %>
